@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-приложение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Моё мини-приложение</h1>
+        <div class="menu">
+            <button onclick="showSection('matches')">Все матчи</button>
+            <button onclick="showSection('withdraw')">Вывести</button>
+            <button onclick="showSection('deposit')">Пополнить</button>
+        </div>
+
+        <div id="matches" class="section">
+            <h2>Все матчи</h2>
+            <input type="text" id="search" placeholder="Поиск матча..." onkeyup="searchMatches()">
+            <ul id="matchList"></ul>
+        </div>
+
+        <div id="withdraw" class="section hidden">
+            <h2>Вывод средств</h2>
+            <p>Здесь будет форма вывода средств.</p>
+        </div>
+
+        <div id="deposit" class="section hidden">
+            <h2>Пополнение</h2>
+            <p>Здесь будет форма пополнения.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
